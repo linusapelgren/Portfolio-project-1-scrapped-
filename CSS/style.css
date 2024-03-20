@@ -15,9 +15,10 @@ body{
      background-color: rgb(255, 255, 255); 
      border-radius: 20px; 
      padding-left: 10px;
+     text-align: center;
  }
  
- body {
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -32,40 +33,56 @@ header {
     align-items: center;
 }
 
-.menu-btn {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 20px;
+/* Style the dropdown button */
+.dropdownbtn {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
     cursor: pointer;
-}
-
-.btn-line {
-    width: 25px;
-    height: 2px;
-    background-color: #fff;
-}
-
-.menu {
-    display: flex;
-}
-
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.menu li {
-    margin-right: 20px;
-}
-
-.menu a {
-    color: #fff;
+    position: relative; /* Add this line */
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .exersize-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position dropdown below the button */
+    left: 0; /* Align with the button */
+    background-color: #f9f9f9;
+    min-width: 100%; /* Match the width of the button */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Style links inside the dropdown */
+.excersize-content a {
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
-}
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+.exersize-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Show the dropdown menu on hover */
+.menu:hover .exersize-content {
+    display: block;
+  }
 
+.home{
+    margin-left: 20px;
+    background-color: white;
+    color: black;
+}
 .content {
     padding: 20px;
+}
+
+.h1{
+    border: black 1px solid;
 }
