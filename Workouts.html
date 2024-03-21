@@ -1,29 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="./CSS/style.css" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Workout website</title>
+  <link href="./CSS/style.css" rel="stylesheet" type="text/css"/> 
 </head>
 <body>
-    <header>
-        <button class="home">Home</button>
-        <div class="menu">
-            <button class="dropdownbtn">Exersizes</button>
-            <div class="dropdown-content">
-                <a href="chest">Chest Excersizes</a>
-                <a href="chest">Leg Excersizes</a>
-                <a href="chest">Chest Excersizes</a>
-                <a href="chest">Back Excersizes</a>
-                <a href="chest">Arm Excersizes</a>
-                <a href="chest">Shoulder Excersizes</a>
-            </div>
-          </div>
-    </header>    
-    <div class="contentpage">
-        <h1>Workouts</h1>
-    </div>  
-    <script src="script.js"></script>
+  <header>
+    <div class="menu">
+      <button class="home">Home</button>
+      <button class="dropdownbtn">Exercises</button>
+      <div class="dropdown-content">
+        <a href="chest">Chest Exercises</a>
+        <a href="legs">Leg Exercises</a>
+        <a href="back">Back Exercises</a>
+        <a href="arms">Arm Exercises</a>
+        <a href="shoulders">Shoulder Exercises</a>
+      </div>
+    </div>
+  </header>
+  <div class="contentpage">
+    <h1>Homepage</h1>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Get the dropdown button
+    var dropdownbtn = document.querySelector('.dropdownbtn');
+    // Get the dropdown content
+    var dropdownContent = document.querySelector('.dropdown-content');
+
+    // Add an event listener to the dropdown button
+    dropdownbtn.addEventListener('click', function() {
+      // Toggle the 'active' class on the dropdown content when the button is clicked
+      dropdownContent.classList.toggle('active');
+    });
+});
+  </script>
 </body>
 </html>
