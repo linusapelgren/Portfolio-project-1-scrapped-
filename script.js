@@ -1,18 +1,9 @@
-const menuBtn = document.querySelector('.menu-btn');
-const menu = document.querySelector('.menu');
-
-menuBtn.addEventListener('click', () => {
-    menu.classList.toggle('show');
-});
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        menu.classList.remove('show');
-    }
-});
-
-window.addEventListener('load', () => {
-    if (window.innerWidth <= 768) {
-        menuBtn.style.display = 'flex';
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the dropdown button
+    var dropdownbtn = document.querySelector('.dropdownbtn');
+  
+    // Toggle the 'active' class on the dropdown button when clicked
+    dropdownBtn.addEventListener('click', function() {
+      dropdownBtn.classList.toggle('active');
+    });
 });
