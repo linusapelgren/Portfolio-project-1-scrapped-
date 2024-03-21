@@ -3,29 +3,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: gray;
+  background-color: rgb(151, 148, 148);
   overflow: scroll;  
 }
 
-/* Styling for the content page */
-.contentpage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 90%;
-  height: 90%;
-  background-color: rgb(255, 255, 255);
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  overflow-y: auto;
-  box-sizing: border-box;
-}
+
 
 /* Styling for the header */
 header {
@@ -33,67 +15,203 @@ header {
   color: #fff;
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 /* Styling for the Home button */
 .home {
-  margin-left: 20px;
-  background-color: white;
+  margin-left: 0px;
+  background-color: transparent;
   color: black;
   padding: 16px;
   font-size: 16px;
   border-radius: 10px;
   cursor: pointer;
+  text-align: center;
+  border: none;
 }
 
-/* Styling the Exercise button */
+.home-wrapper {
+  margin: auto;
+}
+
+.menu {
+  position: relative;
+  flex-basis: auto;
+}
+
 .dropdownbtn {
-  background-color: white;
-  color: black;
+  background-color: transparent;
   padding: 16px;
   font-size: 16px;
   border-radius: 10px;
-  border: none;
   cursor: pointer;
-  position: relative; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  z-index: 100;
+  position: relative;
 }
-  
-/* Styling for the content in Exercise (hidden by default) */
-.dropdown-content {
-  display: none;
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 80px;
+  margin-top: 0;
+}
+
+.sidenav .exersizes a{
+  display: block;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  transition: 0.3s;
+  border: solid 1px lightgray;
+}
+
+.sidenav .trainingstyles a{
+  display: block;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  transition: 0.3s;
+  border: solid 1px lightgray;
+}
+
+.sidenav .nutrition a{
+  display: block;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  transition: 0.3s;
+  border: solid 1px lightgray;
+}
+
+.dropdown-link {
+  position: relative;
+  padding-right: 20px; 
+}
+
+.dropdown-link::after {
+  content: "";
   position: absolute;
-  top: 100%; 
-  left: 0; 
-  background-color: #f9f9f9;
-  min-width: 100%; 
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: gray transparent transparent;
+}
+
+/* The sub navigation menu */
+.exersizes {
+  position: relative;
+  width: 100%;
+  height: auto;
   z-index: 1;
 }
-  
-/* Styling for the links inside the dropdown */
-.dropdown-content a {
-  color: black;
+
+.exersizes .exersizesubnav {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 100;
+  position: relative;
+}
+.exersizesubnav {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0s, max-height 0s;
+}
+.exersizesubnav a {
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-  
-/* Show the dropdown menu on click */
-.dropdownbtn:active + .dropdown-content {
-  display: block;
-}
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
+.exersizes:hover .exersizesubnav {
+  opacity: 1;
+  max-height: 200px;
+  transition: opacity 0.5s, max-height 0.5s;
 }
-
-/* Styling for the content on the page */
-.content {
+/* Styling for the content page */
+.contentpage {
+  width: 90%;
+  max-width: 90%;
+  height: calc(100vh - 400px);
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
   padding: 20px;
+  text-align: left;
+  margin: 80px auto;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.7);
 }
 
-/* Styling for heading */
+h1{
+  text-align: center;
+}
+
+p{
+  position: relative;
+  font-size: x-large;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+}
+.manImg {
+  margin-top: 20px;
+  width: 80%;
+  height: auto;
+}
+
+.footer-spacer {
+  height: 70px; 
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0px -10px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+footer .footerlinks {
+  display: grid;
+}
+
+.footerlinks a {
+  color: lightgray;
+  text-decoration: none;
+}
+
 
