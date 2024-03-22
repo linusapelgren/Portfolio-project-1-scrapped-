@@ -24,10 +24,10 @@
           </div>
         </div>
         <div class="trainingstyles">
-          <a href="#">Training Styles</a>
+          <a href="trainingstyles.html">Training Splits</a>
         </div>
         <div class="nutrition">
-          <a href="#">Nutrition</a>
+          <a href="nutrition.html">Nutrition</a>
         </div>
 
       </div>
@@ -39,21 +39,72 @@
     </div>
   </header>
   <div class="contentpage">
-    <!-- Content goes here -->
-    <h1>Arms Exersizes</h1>
+    <div class="scrollable-content">
+        <!-- Content goes here -->
+        <h1>Arm and shoulder exercises</h1>
+        <p>Arm and shoulder exercises are crucial for developing muscular definition, strength, and functional capacity in the upper body.<br><br> Targeting muscles such as the biceps, triceps, deltoids, and forearms, exercises like bicep curls, tricep dips, shoulder presses, lateral raises, and wrist curls engage these muscle groups effectively.<br><br> Strong arms and shoulders not only contribute to a balanced physique but also support everyday activities like lifting, carrying, and pushing, while also enhancing athletic performance in sports that require overhead movements or throwing.<br><br> Whether using dumbbells, barbells, resistance bands, or bodyweight exercises, incorporating a variety of arm and shoulder exercises into your workout routine can lead to increased muscle mass, improved muscular endurance, and enhanced aesthetic appeal.</p>        
+        <h2>Here are some arm and shoulder exercises:</h2>
+        <div id="videoContainer">
+          <h3 id="videoTitle">Forearm exercises</h3>
+          <iframe id="videoPlayer" src="https://www.youtube.com/embed/MfMxT_jXcPE" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <br>
+        <a id="prevButton"><i class="fas fa-arrow-left fa-2x"></i></a>
+        <a id="nextButton"><i class="fas fa-arrow-right fa-2x"></i></a>
+    </div>
   </div>
   <div class="footerspacer">
     <footer>
       <div class="footerlinks">
-        <a href="./chest.html">Chest exersizes</a>
-        <a href="./back.html">Back exersizes</a>
-        <a href="./legs.html">Leg exersizes</a>
-        <a href="./arms.html">Arm exersizes</a>
-        <a href="trainingstyles.html">Training Styles</a>
+        <table>
+          <tr>
+            <th>Exercises:</th>
+            <th>Other:</th>
+          </tr>
+          <tr>
+            <td><a href="./chest.html">Chest exercises</a></td>
+            <td><a href="./trainingstyles.html">Training Splits</a></td>
+          </tr>
+          <tr>
+            <td><a href="./back.html">Back exercises</a></td>
+            <td><a href="./nutrition.html">Nutrition</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a href="./legs.html">Leg exercises</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a href="./arms.html">Arm exercises</a></td>
+          </tr>
+        </table>
         
       </div>
     </footer>
   </div>
+  <script>
+    var videos = [
+      { url: 'https://www.youtube.com/embed/MfMxT_jXcPE', title: 'Forearm exercises' },
+      { url: 'https://www.youtube.com/embed/i1YgFZB6alI', title: 'Biceps exercises' },
+      { url: 'https://www.youtube.com/embed/94DXwlcX8Po', title: 'Triceps exercises' },
+      { url: 'https://www.youtube.com/embed/21lYP86dHW4?start=193', title: 'Shoulder exercises' }
+    ];
+    var currentVideoIndex = 0;
+  
+    document.getElementById('nextButton').addEventListener('click', function(event) {
+      event.preventDefault();
+      currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+      document.getElementById('videoPlayer').src = videos[currentVideoIndex].url;
+      document.getElementById('videoTitle').textContent = videos[currentVideoIndex].title;
+    });
+  
+    document.getElementById('prevButton').addEventListener('click', function(event) {
+      event.preventDefault();
+      currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+      document.getElementById('videoPlayer').src = videos[currentVideoIndex].url;
+      document.getElementById('videoTitle').textContent = videos[currentVideoIndex].title;
+    });
+  </script>
   <script src="./script.js"></script>
 </body>
 </html>

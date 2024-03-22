@@ -3,8 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: rgb(151, 148, 148);
-  overflow: scroll;  
+  background-color: rgb(192, 187, 187);
 }
 
 
@@ -32,8 +31,11 @@ header {
   cursor: pointer;
   text-align: center;
   border: none;
+  transition: transform 0.3s ease-in-out;
 }
-
+.home:hover{
+  transform: scale(1.2);
+}
 .home-wrapper {
   margin: auto;
 }
@@ -57,8 +59,11 @@ header {
   border: none;
   z-index: 100;
   position: relative;
+  transition: transform 0.3s ease-in-out;
 }
-
+.dropdownbtn:hover{
+  transform: scale(1.2);
+}
 .sidenav {
   height: 100%;
   width: 0;
@@ -165,11 +170,30 @@ header {
   padding: 20px;
   text-align: left;
   margin: 80px auto;
-  overflow-y: auto;
+  overflow: hidden;
   box-sizing: border-box;
   display: block;
   text-align: center;
   box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.7);
+}
+.scrollable-content {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 15px; 
+}
+
+.scrollable-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
 
 h1{
@@ -187,6 +211,7 @@ p{
   margin-top: 20px;
   width: 80%;
   height: auto;
+  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.7);
 }
 
 .footer-spacer {
@@ -214,4 +239,50 @@ footer .footerlinks {
   text-decoration: none;
 }
 
+iframe{
+  width: 60%;
+  height: 50%;
+  border: 10px solid darkgray;
+  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.7);
+}
 
+#videoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  height: 50%;
+  margin: auto;
+}
+
+#videoContainer iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#prevButton, #nextButton {
+  width: 50px; 
+  height: 50px; 
+  margin-top: 10px;
+}
+
+#prevButton{
+  color: #333;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  left: -50px;
+}
+#nextButton{
+  color: #333;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  right: 50px;
+}
