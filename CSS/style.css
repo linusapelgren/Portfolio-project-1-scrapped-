@@ -24,7 +24,7 @@ header {
 .home {
   margin-left: 0px;
   background-color: transparent;
-  color: black;
+  color: orangered;
   padding: 16px;
   font-size: 16px;
   border-radius: 10px;
@@ -48,6 +48,7 @@ header {
 .dropdownbtn {
   background-color: transparent;
   padding: 16px;
+  color: orangered;
   font-size: 16px;
   border-radius: 10px;
   cursor: pointer;
@@ -196,10 +197,10 @@ header {
   border-radius: 20px;
 }
 
-h1{
-  text-align: center;
+h2{
+  color: orangered;
+  text-decoration: underline;
 }
-
 p{
   position: relative;
   font-size: x-large;
@@ -212,6 +213,13 @@ p{
   width: 80%;
   height: auto;
   box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.7);
+}
+
+.food{
+  width: 50%;
+  height: auto;
+  margin-top: 20px;
+  padding-left: 15%
 }
 
 .footer-spacer {
@@ -286,3 +294,29 @@ iframe{
   border: none;
   right: 50px;
 }
+
+.sidenote{
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+  margin-top: 20px;
+}
+
+strong{
+  color: orangered;
+  font-weight: bold;
+}
+
+h3{
+  text-align: left;
+  padding: 10px;
+  margin: 10px;
+}
+.YTLink{
+  text-decoration: none;
+  color: orangered;
+  font-style: italic;
+  font-weight: bold;
+}
+

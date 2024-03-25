@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
       icon.classList.add('fa-bars');
     }
   });
+
   window.onscroll = function() {scrollFunction()};
 
   function scrollFunction() {
@@ -28,4 +29,5 @@ document.addEventListener('DOMContentLoaded', function() {
       header.style.display = "block";
     }
   }
+
 });
