@@ -6,8 +6,6 @@ body {
   background-color: rgb(192, 187, 187);
 }
 
-
-
 /* Styling for the header */
 header {
   background-color: #333;
@@ -33,19 +31,19 @@ header {
   border: none;
   transition: transform 0.3s ease-in-out;
 }
+/* Styling for the Home button */
 .home:hover{
   transform: scale(1.2);
 }
+/* Styling for the Home button */
 .home-wrapper {
   margin: auto;
 }
-
+/*Styling for the dropdown menu */
 .menu {
-  position: relative;
-  flex-basis: auto;
 }
-
-.dropdownbtn {
+/*Styling for the dropdown menu */
+.menubtn {
   background-color: transparent;
   padding: 16px;
   color: orangered;
@@ -62,9 +60,12 @@ header {
   position: relative;
   transition: transform 0.3s ease-in-out;
 }
-.dropdownbtn:hover{
+/*Hover effect on dropdown menu */
+.menubtn:hover{
   transform: scale(1.2);
 }
+
+/*Styling for the dropdown menu */
 .sidenav {
   height: 100%;
   width: 0;
@@ -79,6 +80,7 @@ header {
   margin-top: 0;
 }
 
+/*Styling for the dropdown menu  */
 .sidenav .exersizes a{
   display: block;
   padding: 8px 8px 8px 32px;
@@ -89,6 +91,7 @@ header {
   border: solid 1px lightgray;
 }
 
+/*Styling for the dropdown menu */
 .sidenav .trainingstyles a{
   display: block;
   padding: 8px 8px 8px 32px;
@@ -98,7 +101,7 @@ header {
   transition: 0.3s;
   border: solid 1px lightgray;
 }
-
+/*Styling for the dropdown menu */
 .sidenav .nutrition a{
   display: block;
   padding: 8px 8px 8px 32px;
@@ -108,13 +111,14 @@ header {
   transition: 0.3s;
   border: solid 1px lightgray;
 }
-
-.dropdown-link {
+/*Styling for the subnav*/
+.dropdownbtn {
   position: relative;
   padding-right: 20px; 
 }
 
-.dropdown-link::after {
+/*Styiling for the subnav arrow */
+.dropdownbtn::after {
   content: "";
   position: absolute;
   right: 10px;
@@ -125,14 +129,7 @@ header {
   border-color: gray transparent transparent;
 }
 
-/* The sub navigation menu */
-.exersizes {
-  position: relative;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-}
-
+/*Styling for the subnav */
 .exersizes .exersizesubnav {
   position: absolute;
   left: 0;
@@ -142,20 +139,19 @@ header {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 100;
   position: relative;
-}
-.exersizesubnav {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
   transition: opacity 0s, max-height 0s;
 }
+/*Styling for the subnav */
 .exersizesubnav a {
   color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-
+/*Hover effect on subnav*/
 .exersizes:hover .exersizesubnav {
   opacity: 1;
   max-height: 200px;
@@ -165,7 +161,6 @@ header {
 .contentpage {
   width: 90%;
   max-width: 90%;
-  height: calc(100vh - 400px);
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   padding: 20px;
@@ -177,6 +172,8 @@ header {
   text-align: center;
   box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.7);
 }
+
+/* Styling for the content page */
 .scrollable-content {
   width: 100%;
   height: 100%;
@@ -184,23 +181,25 @@ header {
   padding-right: 15px; 
 }
 
+/* Styling for the scrollbar */
 .scrollable-content::-webkit-scrollbar {
   width: 8px;
 }
-
+/* Styling for the scrollbar */
 .scrollable-content::-webkit-scrollbar-track {
   background: transparent;
 }
-
+/* Styling for the scrollbar */
 .scrollable-content::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
 }
-
+/*Styling for h2 */
 h2{
   color: orangered;
   text-decoration: underline;
 }
+/*Styling for p */
 p{
   position: relative;
   font-size: x-large;
@@ -208,13 +207,16 @@ p{
   margin: 10px;
   text-align: left;
 }
+
+/* Styling for the image */
 .manImg {
   margin-top: 20px;
-  width: 80%;
+  width: 60%;
   height: auto;
   box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.7);
 }
 
+/* Styling for the image */
 .food{
   width: 50%;
   height: auto;
@@ -222,38 +224,38 @@ p{
   padding-left: 15%
 }
 
+/* Styling for the footer */
 .footer-spacer {
   height: 70px; 
 }
-
+/* Styling for the footer */
 footer {
   background-color: #333;
   color: #fff;
   padding: 10px;
   text-align: left;
-  position: fixed;
-  bottom: 0;
   width: 100%;
   margin-top: 20px;
   box-shadow: 0px -10px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
+/* Styling for the footer */
 footer .footerlinks {
   display: grid;
 }
-
+/* Styling for the footer */
 .footerlinks a {
   color: lightgray;
   text-decoration: none;
 }
-
+/* Styling for the videos */
 iframe {
   width: 60vw;
   height: calc(60vw * 9 / 16);
   border: 10px solid darkgray;
   box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.7);
 }
-
+/* Styling for the videos */
 #videoContainer {
   display: flex;
   flex-direction: column;
@@ -262,18 +264,18 @@ iframe {
   height: calc(60vw * 9 / 16);
   margin: auto;
 }
-
+/* Styling for the videos */
 #videoContainer iframe {
   width: 100%;
   height: 100%;
 }
-
+/* Styling for the next and previous buttons */
 #prevButton, #nextButton {
   width: 50px; 
   height: 50px; 
   margin-top: 10px;
 }
-
+/* Styling for the next and previous buttons */
 #prevButton{
   color: #333;
   padding: 16px;
@@ -284,6 +286,7 @@ iframe {
   border: none;
   left: -50px;
 }
+/* Styling for the next and previous buttons */
 #nextButton{
   color: #333;
   padding: 16px;
@@ -295,6 +298,7 @@ iframe {
   right: 50px;
 }
 
+/*Styling for the sidenote*/
 .sidenote{
   font-size: 20px;
   font-weight: bold;
@@ -303,16 +307,19 @@ iframe {
   margin-top: 20px;
 }
 
+/*Styling for strong*/
 strong{
   color: orangered;
   font-weight: bold;
 }
 
+/*Styling for h3*/
 h3{
   text-align: left;
   padding: 10px;
   margin: 10px;
 }
+/*Styling for YTLink*/
 .YTLink{
   text-decoration: none;
   color: orangered;
@@ -320,6 +327,7 @@ h3{
   font-weight: bold;
 }
 
+/*Styling for the table */
 th{
   color: orangered;
   font-weight: bold;

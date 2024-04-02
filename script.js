@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Get the hamburger button
-  var hamburger = document.querySelector('.dropdownbtn');
+  var hamburger = document.querySelector('.menubtn');
 
   // Get the side navigation menu
   var sidenav = document.getElementById('mySidenav');
